@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "RateWatch",
+    "slug": "ratewatch",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/ratewatch.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/ratewatch.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/ratewatch.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ratewatch.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/ratewatch.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

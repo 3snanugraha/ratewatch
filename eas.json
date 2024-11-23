@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 12.6.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_DB_HOST": "$EXPO_PUBLIC_DB_HOST",
+        "EXPO_PUBLIC_DB_USER": "$EXPO_PUBLIC_DB_USER",
+        "EXPO_PUBLIC_DB_PASS": "$EXPO_PUBLIC_DB_PASS"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_DB_HOST": "$EXPO_PUBLIC_DB_HOST",
+        "EXPO_PUBLIC_DB_USER": "$EXPO_PUBLIC_DB_USER",
+        "EXPO_PUBLIC_DB_PASS": "$EXPO_PUBLIC_DB_PASS"
+      }
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
