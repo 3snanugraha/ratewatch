@@ -9,8 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/ratewatch.png",
-      "resizeMode": "contain",
+      "image": "./assets/images/splash-ratewatch.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "ios": {
@@ -33,6 +33,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "389ce0e6-3056-4a10-9dde-cdf834a9b653"
+      }
     }
   }
 }

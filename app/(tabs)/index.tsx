@@ -63,7 +63,7 @@ export default function InterestRatesScreen() {
 
   const fetchRates = async () => {
     setLoading(true); // Pastikan ini di awal
-    console.log('Starting fetch...');
+    // console.log('Starting fetch...');
     try {
       const authManager = AuthManager;
   
@@ -114,7 +114,7 @@ export default function InterestRatesScreen() {
   
       // Simpan data ke variable terlebih dahulu
       const groupedDataResult = groupDataByCentralBank(formattedRates, formattedProbabilities);
-      console.log('About to set grouped data:', groupedDataResult);
+      // console.log('About to set grouped data:', groupedDataResult);
 
       
       
@@ -152,11 +152,11 @@ export default function InterestRatesScreen() {
     rates: InterestRate[], 
     probabilities: InterestRateProbability[]
   ) => {
-    console.log('Grouping data with:', { rates, probabilities }); // Debug log
+    // console.log('Grouping data with:', { rates, probabilities }); 
     
     const grouped = rates.reduce((acc, rate) => {
       const centralBank = rate.central_bank;
-      console.log('Processing rate for:', centralBank); // Debug log
+      // console.log('Processing rate for:', centralBank); 
       
       if (!acc[centralBank]) {
         acc[centralBank] = {
@@ -172,7 +172,7 @@ export default function InterestRatesScreen() {
     // Process probabilities
     probabilities.forEach(prob => {
       const centralBankName = prob.central_bank.central_bank;
-      console.log('Processing probability for:', centralBankName); // Debug log
+      // console.log('Processing probability for:', centralBankName); 
       
       if (!grouped[centralBankName]) {
         grouped[centralBankName] = {
@@ -184,7 +184,7 @@ export default function InterestRatesScreen() {
       grouped[centralBankName].probabilities.push(prob);
     });
   
-    console.log('Final grouped data:', grouped); // Debug log
+    // console.log('Final grouped data:', grouped); 
     return grouped;
   };
 
@@ -389,7 +389,7 @@ export default function InterestRatesScreen() {
   );
 
   const renderCentralBankSection = (centralBank: string, data: {rates: InterestRate[], probabilities: InterestRateProbability[]}) => {
-    console.log('Rendering section for:', centralBank, 'with data:', data);
+    // console.log('Rendering section for:', centralBank, 'with data:', data);
     
     if (!data || (!data.rates.length && !data.probabilities.length)) {
       return null;
@@ -557,8 +557,6 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 15,
     overflow: 'hidden',
-    borderColor: '#eadff7',
-    borderWidth: 1,
     backgroundColor: 'rgba(0,0,0,0.2)',
   },
   sectionHeader: {
